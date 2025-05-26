@@ -756,24 +756,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 494879831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00dac2e7459d6c74bb368bf3f7f42525, type: 3}
+  m_Script: {fileID: 11500000, guid: d5b41c9fbd965fd44822938ae2054333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  candyPrefabs:
-  - {fileID: 9058022648255641411, guid: a20fc3c42d631b749bf4cec73e94b3ac, type: 3}
-  - {fileID: 9058022648255641411, guid: 14b0ce20af0850f4b847da06ef857d02, type: 3}
-  - {fileID: 9058022648255641411, guid: c6df06ceec34c3a42a71c00f30899a34, type: 3}
-  - {fileID: 9058022648255641411, guid: 92df20d4f3b1ac54497ef046e6037b6a, type: 3}
-  - {fileID: 9058022648255641411, guid: 92df20d4f3b1ac54497ef046e6037b6a, type: 3}
-  - {fileID: 9058022648255641411, guid: 92df20d4f3b1ac54497ef046e6037b6a, type: 3}
-  - {fileID: 783944432390815000, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
-  - {fileID: 8127847312198966282, guid: afa852911dcb7b1449c79fe7e5804bc3, type: 3}
+  candyPrefabs: []
   candyParentTransform: {fileID: 0}
-  shotForce: 500
-  shotTorque: 3
-  baseWidth: 5
-  manager: {fileID: 1896235254}
-  goldEffectPrefab: {fileID: 3929830807130232629, guid: 8c8e38fc179bfb546a9638325348f9ac, type: 3}
+  shotTorque: 2
+  shotForce: 2
+  basewidth: 2
+  cm: {fileID: 0}
 --- !u!4 &494879833
 Transform:
   m_ObjectHideFlags: 0
@@ -1484,15 +1475,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 622947523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598af5599746adf4eab9c05f07b0d772, type: 3}
+  m_Script: {fileID: 11500000, guid: b3c6f4345881d474987911e24d9059a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1896235254}
-  reward: 3
-  effectPrefab: {fileID: 5225981646391276304, guid: 51aac61880779f54ba0dee368d89585c, type: 3}
+  CandyManager: {fileID: 0}
+  reward: 0
+  effectPrefab: {fileID: 0}
   effectRotation: {x: 0, y: 0, z: 0}
-  floatingScorePrefab: {fileID: 9084888471572742919, guid: 258158132fff65c4abb89e440e5b0a33, type: 3}
-  uiCanvasTransform: {fileID: 0}
 --- !u!1 &687767980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2609,15 +2598,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1177177568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598af5599746adf4eab9c05f07b0d772, type: 3}
+  m_Script: {fileID: 11500000, guid: 1109155a27f6e76488f171139550b7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1896235254}
-  reward: 3
-  effectPrefab: {fileID: 5225981646391276304, guid: 51aac61880779f54ba0dee368d89585c, type: 3}
-  effectRotation: {x: -90, y: 0, z: 0}
-  floatingScorePrefab: {fileID: 0}
-  uiCanvasTransform: {fileID: 0}
+  floatSpeed: 50
+  duration: 1.5
 --- !u!65 &1177177570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3069,10 +3054,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1263538350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fc7afb6d7aeb314893c63bd1d0345f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 57dfd4416d9ac3047abbddcf0c41bdcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 2
+  amplitude: 5
   speed: 2
 --- !u!54 &1263538356
 Rigidbody:
@@ -3217,6 +3202,25 @@ Transform:
   - {fileID: 1974163279}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1371681036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 783944432390815000, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+  m_PrefabInstance: {fileID: 523908685922361569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1371681037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371681036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1e95ee0b8c68743924252d481a1d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonusCandy: 5
+  CandyManager: {fileID: 0}
 --- !u!1001 &1400015058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4211,12 +4215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3359cc7ff63a4d148a80f615a8485983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCandyAmount: 25
-  candy: 0
-  candyAmount: {fileID: 1117217221}
-  countDown: {fileID: 1809904691}
-  totalScore: 0
-  totalScoreText: {fileID: 1820580673}
 --- !u!4 &1896235255
 Transform:
   m_ObjectHideFlags: 0
@@ -4973,10 +4971,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4982683969377589858, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 783944432390815000, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1371681037}
   m_SourcePrefab: {fileID: 100100000, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
 --- !u!1001 &5017562968769167616
 PrefabInstance:
