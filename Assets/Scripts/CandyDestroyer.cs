@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CandyDestroyer : MonoBehaviour
 {
-    public CandyManager manager;
+    public CandyManager CandyManager;
     public int reward;
-    public GameObject effectPrefab;//‚³‚Á‚«ì‚Á‚½ƒGƒtƒFƒNƒg
+    public GameObject effectPrefab;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Gï¿½tï¿½Fï¿½Nï¿½g
     public Vector3 effectRotation;
     // Start is called before the first frame update
     void Start()
@@ -19,16 +19,16 @@ public class CandyDestroyer : MonoBehaviour
     {
         
     }
-    //Œ©‚¦‚È‚¢•Ç‚É“–‚½‚Á‚½‚çˆ¹‚ğÁ‚·
+    //ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½Ç‚É“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½çˆ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private void OnTriggerEnter(Collider other)
     {
-        //d‚È‚Á‚½‘Šè‚Ìƒ^ƒO‚ªƒLƒƒƒ“ƒfƒB‚È‚çA‚»‚Ì‘Šè‚ğÁ‚·
+        //ï¿½dï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìƒ^ï¿½Oï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½fï¿½Bï¿½È‚ï¿½Aï¿½ï¿½ï¿½Ì‘ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (other.gameObject.tag == "Candy")
         {
             Destroy(other.gameObject);
-            //ƒLƒƒƒ“ƒfƒB‚ğ’Ç‰Á‚·‚é
-            manager.AddCandy(reward);
-            manager.DisplayCandyAmount();
+            //ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½fï¿½Bï¿½ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½ï¿½
+            CandyManager.AddCandy(reward);
+            CandyManager.DisplayCandyAmount();
             if(effectPrefab!= null)
             {
                 Instantiate(effectPrefab, other.transform.position, Quaternion.Euler(effectRotation));
