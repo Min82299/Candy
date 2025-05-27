@@ -64,5 +64,10 @@ public class CandyManager : MonoBehaviour
     {
         return candy;
     }
-    
+
+    public int AddScore(int amount)
+    {
+        return candy + amount;
+    }
+
 }

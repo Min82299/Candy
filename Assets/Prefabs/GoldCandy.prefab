@@ -63,6 +63,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -116,10 +117,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783944432390815000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -145,8 +146,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 783944432390815000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e02343f75fa8094f84a271fe8c57777, type: 3}
+  m_Script: {fileID: 11500000, guid: 16abbacbd1f5b87419e1732756f86a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusCandy: 5
-  manager: {fileID: 0}
+  defaultCandyAmount: 30
+  candy: 50
+  candyamount: {fileID: 0}
+  countdown: {fileID: 0}
